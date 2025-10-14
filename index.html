@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İrfan - Manevi Danışmanlık</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3D Background with Dua Image -->
+    <div class="background-3d"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-hands-praying"></i>
+                <h1>İrfan Manevi Danışmanlık</h1>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Danışmanlar</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Makaleler</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Randevu</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Manevi Yolculuğunuzda Yanınızdayız</h2>
+            <p>İslami değerler ışığında psikolojik ve manevi danışmanlık hizmeti sunuyoruz. Uzman danışmanlarımızla hayatınızdaki zorluklara çözüm bulun, iç huzurunuzu yeniden kazanın.</p>
+            <button class="btn btn-accent" id="appointmentBtn">
+                <i class="fas fa-calendar-check"></i> Hemen Randevu Al
+            </button>
+        </section>
+
+        <!-- Features -->
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Uzman Danışmanlar</h3>
+                <p>Alanında uzman, tecrübeli ve güvenilir danışman kadromuzla hizmetinizdeyiz.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h3>Gizlilik Esastır</h3>
+                <p>Tüm görüşmeleriniz tamamen gizli tutulur, kişisel bilgileriniz koruma altındadır.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Online Görüşme</h3>
+                <p>Ev konforunda, online görüşmelerle kolayca danışmanlık alabilirsiniz.</p>
+            </div>
+        </div>
+
+        <!-- Appointment Section -->
+        <section class="appointment-section">
+            <h2 class="section-title">Danışmanlık Randevusu</h2>
+            
+            <div class="appointment-container">
+                <div class="counselor-profile">
+                    <div class="counselor-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Dr. Mehmet Yılmaz</h3>
+                    <div class="counselor-title">Psikolog & Manevi Danışman</div>
+                    <p class="counselor-bio">15 yılı aşkın tecrübesiyle psikoloji ve İslami ilimler alanında uzmanlaşmıştır. Modern psikoterapi tekniklerini İslami değerlerle harmanlayarak danışanlarına rehberlik etmektedir.</p>
+                    <div class="rating">
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <i class="fas fa-star" style="color: gold;"></i>
+                        <span>(128 Değerlendirme)</span>
+                    </div>
+                </div>
+                
+                <div class="appointment-form">
+                    <h3>Randevu Formu</h3>
+                    <form id="appointmentForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Adınız Soyadınız</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="consultType">Danışmanlık Türü</label>
+                                <select id="consultType" required>
+                                    <option value="">Seçiniz</option>
+                                    <option value="bireysel">Bireysel Terapi</option>
+                                    <option value="aile">Aile Danışmanlığı</option>
+                                    <option value="evlilik">Evlilik Danışmanlığı</option>
+                                    <option value="cocuk">Çocuk ve Ergen Danışmanlığı</option>
+                                    <option value="manevi">Manevi Danışmanlık</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Tercih Ettiğiniz Tarih</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Tercih Ettiğiniz Saat</label>
+                                <select id="time" required>
+                                    <option value="">Seçiniz</option>
+                                    <option value="09:00">09:00 - 10:00</option>
+                                    <option value="11:00">11:00 - 12:00</option>
+                                    <option value="14:00">14:00 - 15:00</option>
+                                    <option value="16:00">16:00 - 17:00</option>
+                                    <option value="18:00">18:00 - 19:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Eklemek İstedikleriniz (Opsiyonel)</label>
+                            <textarea id="message" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">
+                            <i class="fas fa-arrow-right"></i> Ödemeye Geç
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Modal -->
+        <div class="modal" id="paymentModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <h2>Ödeme İşlemi</h2>
+                <p>Danışmanlık ücreti: <strong>300 TL</strong></p>
+                
+                <div class="payment-options">
+                    <div class="payment-option" id="creditCard">
+                        <i class="fas fa-credit-card"></i>
+                        <h4>Kredi Kartı</h4>
+                        <p>Güvenli ödeme</p>
+                    </div>
+                    <div class="payment-option" id="bankTransfer">
+                        <i class="fas fa-university"></i>
+                        <h4>Havale/EFT</h4>
+                        <p>Banka transferi</p>
+                    </div>
+                </div>
+                
+                <div id="creditCardForm" class="form-group" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Kart Numarası</label>
+                            <input type="text" placeholder="0000 0000 0000 0000">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Son Kullanma Tarihi</label>
+                            <input type="text" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="text" placeholder="000">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Kart Üzerindeki İsim</label>
+                            <input type="text" placeholder="Ad Soyad">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" id="completePayment" style="width: 100%;">
+                    <i class="fas fa-lock"></i> Ödemeyi Tamamla (300 TL)
+                </button>
+            </div>
+        </div>
+
+        <!-- Appointment Confirmation -->
+        <div class="confirmation" id="confirmation">
+            <i class="fas fa-check-circle"></i>
+            <h2>Randevunuz Başarıyla Oluşturuldu!</h2>
+            <p>Danışmanlık randevunuz başarıyla oluşturulmuştur. Randevu detayları aşağıda bilgilerinize sunulmuştur.</p>
+            
+            <div class="appointment-details">
+                <div class="detail-card">
+                    <h4>Danışman</h4>
+                    <p>Dr. Mehmet Yılmaz</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Tarih & Saat</h4>
+                    <p id="confirmationDate">15 Ağustos 2023</p>
+                    <p id="confirmationTime">14:00 - 15:00</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Danışmanlık Türü</h4>
+                    <p id="confirmationType">Bireysel Terapi</p>
+                </div>
+            </div>
+            
+            <p>Randevu öncesi danışmanımız tarafından telefonunuz aranacaktır.</p>
+            <button class="btn">
+                <i class="fas fa-download"></i> Randevu Detaylarını İndir
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-hands-praying"></i> İrfan</h2>
+                </div>
+                <p>İslami değerler ışığında psikolojik ve manevi danışmanlık hizmeti sunuyoruz. Modern psikoloji ile İslami ilimleri birleştirerek bireylere ve ailelere destek oluyoruz.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Danışmanlar</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Hizmetlerimiz</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Makaleler</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>İletişim</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Bahçelievler Mah. Maneviyat Sok. No:15<br>Fatih/İstanbul</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>+90 212 555 44 33</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>info@irfandanismanlik.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Pazartesi-Cumartesi: 09:00-19:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 İrfan Manevi Danışmanlık. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
